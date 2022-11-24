@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kishore.lakkireddy\\source\\repos\\Git local repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\FullStack.API.csproj": {}
+    "C:\\Users\\kishore.lakkireddy\\source\\repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\FullStack.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kishore.lakkireddy\\source\\repos\\Git local repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\FullStack.API.csproj": {
+    "C:\\Users\\kishore.lakkireddy\\source\\repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\FullStack.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kishore.lakkireddy\\source\\repos\\Git local repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\FullStack.API.csproj",
+        "projectUniqueName": "C:\\Users\\kishore.lakkireddy\\source\\repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\FullStack.API.csproj",
         "projectName": "FullStack.API",
-        "projectPath": "C:\\Users\\kishore.lakkireddy\\source\\repos\\Git local repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\FullStack.API.csproj",
+        "projectPath": "C:\\Users\\kishore.lakkireddy\\source\\repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\FullStack.API.csproj",
         "packagesPath": "C:\\Users\\kishore.lakkireddy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kishore.lakkireddy\\source\\repos\\Git local repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\obj\\",
+        "outputPath": "C:\\Users\\kishore.lakkireddy\\Source\\Repos\\Capstone-project\\Capstone_Project_DotNet_Part-2\\FullStack.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
