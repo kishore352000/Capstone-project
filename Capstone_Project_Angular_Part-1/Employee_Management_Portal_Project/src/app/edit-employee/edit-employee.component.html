@@ -1,0 +1,110 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+  <img class="background-image" src="assets/photo.jpg" alt="">
+
+  <div class="one">
+    <div *ngIf="alert" class="alert alert-custom alert-dismissible fade show" role="alert">
+      <strong><h5>Updated Successfully !....</h5></strong> 
+      <button type="button" routerLink="/employees" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    </div>
+
+    <div class="one">
+    <div *ngIf="alert1" class="alert alert1-custom alert-dismissible fade show" role="alert">
+      <strong><h5>Deleted Successfully !....</h5></strong> 
+      <button type="button" routerLink="/employees" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    </div>
+
+  <div class="container">
+    <div class="myCard">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="myLeftCtn">
+            <form class="myForm text-center">
+              <header>Edit Employee</header>
+              <form #form="ngForm" (ngSubmit)="updateEmployee()">
+                <div class="mb-3">
+                  <i class="fas fa-id-card" ></i>
+                  <input type="text" class="myInput" id="id" name="id" readonly [(ngModel)]="employeeDetails.id">
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-user"></i>
+                  <input type="text" required minlength="4" pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?$" maxlength="20" #name="ngModel"
+                    class="myInput" id="name" name="name" [(ngModel)]="employeeDetails.name">
+                    <div>
+                  <span *ngIf="(name.invalid && name.touched)&& name.errors?.['required']" style="color:red;">* Name is
+                    required</span>
+                  <span *ngIf="(name.invalid && name.touched)&& name.errors?.['minlength']" style="color:red;">* Name must
+                    be
+                    atleast 4 characters </span>
+                  <span *ngIf="(name.invalid && name.touched)&& name.errors?.['pattern']" style="color:red;">* Name should
+                    contain alphabets only </span>
+                </div>
+                </div>
+
+                <div class="mb-3">
+                  <i class="fas fa-id-badge"></i>
+                  <input type="text" required minlength="4" pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?$" maxlength="30" #role="ngModel"
+                    class="myInput" id="name" name="role" [(ngModel)]="employeeDetails.role">
+                    <div>
+                  <span *ngIf="(role.invalid && role.touched)&& role.errors?.['required']" style="color:red;">* Role is
+                    required</span>
+                  <span *ngIf="(role.invalid && role.touched)&& role.errors?.['minlength']" style="color:red;">* Role must
+                    be
+                    atleast 4 characters </span>
+                  <span *ngIf="(role.invalid && role.touched)&& role.errors?.['pattern']" style="color:red;">* Role should
+                    contain alphabets only </span>
+                </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" required email #email="ngModel" class="myInput" id="email" name="email"
+                    [(ngModel)]="employeeDetails.email">
+                    <div>
+                  <span *ngIf="(email.invalid && email.touched)&& email.errors?.['required']" style="color:red;">* Email
+                    is
+                    required is
+                    required</span>
+                  <span *ngIf="(email.invalid && email.touched)&& email.errors?.['email']" style="color:red;">* Enter
+                    valid
+                    Email address</span>
+                </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-phone"></i>
+                  <input  type="text" required pattern="^((\\+91-?)|0)?[0-9]{10}$" #phone="ngModel" class="myInput"
+                    id="phone" name="phone" [(ngModel)]="employeeDetails.phone">
+                <div>
+                  <span *ngIf="(phone.invalid && phone.touched)&& phone.errors?.['required']" style="color:red;">* Mobile
+                    number is required </span>
+                  <span *ngIf="(phone.invalid && phone.touched)&& phone.errors?.['pattern']" style="color:red;">* Please
+                    enter a valid phone number</span>
+
+                </div>
+                </div>
+                <button type="submit" class="butt"  [disabled]="form.invalid">Save</button> 
+                <button type="button" class="butt1"
+                  (click)="deleteEmployee(employeeDetails.id)">Delete</button>
+              </form>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="myRightCtn">
+            <div class="box">
+              <header style="color: black;">Welcome..</header>
+              <p class="display">Employees data is confidential.
+                Don't share to anyone.
+                Please be cautious while editing the data .</p>
+
+              
+             
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>

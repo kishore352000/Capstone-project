@@ -1,0 +1,119 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signup": [
+    {
+      "name": "kishore",
+      "email": "kishore@gmail.com",
+      "mobile": "9704161136",
+      "password": "Kishore1",
+      "id": 1
+    },
+    {
+      "name": "raju",
+      "email": "raju@gmail.com",
+      "mobile": "9293847554",
+      "password": "Kishore1",
+      "id": 2
+    },
+    {
+      "name": "joshi",
+      "email": "joshi@gmail.com",
+      "mobile": "9876545434",
+      "password": "Joshi1",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "name": "kishore",
+      "email": "kishore@gmail.com",
+      "mobile": "7777777777",
+      "password": "kishoreK1",
+      "id": 5
+    },
+    {
+      "name": "kishore",
+      "email": "kishore1@gmail.com",
+      "mobile": "7737327237",
+      "password": "Kishore1",
+      "id": 6
+    },
+    {
+      "name": "kishore",
+      "email": "kishore11@gmail.com",
+      "mobile": "9876552525",
+      "password": "Kishore1",
+      "id": 7
+    },
+    {
+      "name": "kishore",
+      "email": "kishore111@gmail.com",
+      "mobile": "1234564533",
+      "password": "Kishore1",
+      "id": 8
+    },
+    {
+      "name": "kishore",
+      "email": "ra@gmail.com",
+      "mobile": "9876543217",
+      "password": "Kishore1",
+      "id": 9
+    },
+    {
+      "name": "kishore",
+      "email": "rrr@gmail.com",
+      "mobile": "9876543211",
+      "password": "Kishore11",
+      "id": 10
+    },
+    {
+      "name": "kishore",
+      "email": "kishor@gmail.com",
+      "mobile": "9287987989",
+      "password": "Kishueue1",
+      "id": 11
+    },
+    {
+      "name": "santosh",
+      "email": "santosh@gmail.com",
+      "mobile": "8758748322",
+      "password": "Santosh1",
+      "id": 12
+    },
+    {
+      "name": "charan",
+      "email": "charan@gmail.com",
+      "mobile": "8373673783",
+      "password": "Charan1",
+      "id": 13
+    },
+    {
+      "name": "suresh",
+      "email": "suresh@gmail.com",
+      "mobile": "9878976545",
+      "password": "Suresh1",
+      "id": 14
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

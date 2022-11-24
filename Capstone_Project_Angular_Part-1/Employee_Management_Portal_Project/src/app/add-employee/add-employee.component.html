@@ -1,0 +1,97 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+  <img class="background-image" src="assets/photo.jpg" alt="">
+
+  <div class="one">
+    <div *ngIf="alert" class="alert alert-custom alert-dismissible fade show" role="alert">
+      <strong><h5>Added Successfully !....</h5></strong> 
+      <button type="button" routerLink="/employees" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    </div>
+
+  <div class="container">
+    <div class="myCard">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="myLeftCtn">
+            <form class="myForm text-center">
+              <header>Add Employee</header>
+              <form #form="ngForm" (ngSubmit)="addEmployee()">
+                <div class="mb-3">
+                  <i class="fas fa-user"></i>
+                  <input placeholder="Enter Name" type="text" required minlength="4" pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?$" maxlength="20" #name="ngModel"
+                    class="myInput" id="name" name="name" [(ngModel)]="addEmployeeRequest.name">
+                    <div>
+                  <span *ngIf="(name.invalid && name.touched)&& name.errors?.['required']" style="color:red;">* Name is
+                    required</span>
+                  <span *ngIf="(name.invalid && name.touched)&& name.errors?.['minlength']" style="color:red;">* Name must
+                    be atleast 4 characters </span>
+                  <span *ngIf="(name.invalid && name.touched)&& name.errors?.['pattern']" style="color:red;">* Name should
+                    contain alphabets only </span>
+                    <span *ngIf="(name.invalid && name.touched)&& name.errors?.['maxlength']" style="color:red;">* Name is exceeding the max limit </span>
+                </div>
+                </div>
+
+                <div class="mb-3">
+                  <i class="fas fa-id-badge"></i>
+                  <input placeholder="Enter Role" type="text" required minlength="4" pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?$" maxlength="30" #role="ngModel"
+                    class="myInput" id="role" name="role" [(ngModel)]="addEmployeeRequest.role">
+                    <div>
+                  <span *ngIf="(role.invalid && role.touched)&& role.errors?.['required']" style="color:red;">* Role is
+                    required</span>
+                  <span *ngIf="(role.invalid && role.touched)&& role.errors?.['minlength']" style="color:red;">* Role must
+                    be atleast 4 characters </span>
+                  <span *ngIf="(role.invalid && role.touched)&& role.errors?.['pattern']" style="color:red;">* Role should
+                    contain alphabets only </span>
+                    <span *ngIf="(role.invalid && role.touched)&& role.errors?.['maxlength']" style="color:red;">* Role is exceeding the max limit </span>
+                </div>
+                </div>
+
+                <div class="mb-3">
+                  <i class="fas fa-envelope"></i>
+                  <input placeholder="Enter Email" type="email" required email #email="ngModel" class="myInput" id="email" name="email"
+                    [(ngModel)]="addEmployeeRequest.email">
+                    <div>
+                  <span *ngIf="(email.invalid && email.touched)&& email.errors?.['required']" style="color:red;">* Email
+                    is required is required</span>
+                  <span *ngIf="(email.invalid && email.touched)&& email.errors?.['email']" style="color:red;">* Enter
+                    valid Email address</span>
+                </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-phone"></i>
+                  <input placeholder="Enter Phone" type="text" required pattern="^((\\+91-?)|0)?[0-9]{10}$" #phone="ngModel" class="myInput"
+                    id="phone" name="phone" [(ngModel)]="addEmployeeRequest.phone">
+                <div>
+                  <span *ngIf="(phone.invalid && phone.touched)&& phone.errors?.['required']" style="color:red;">* Mobile
+                    number is required </span>
+                  <span *ngIf="(phone.invalid && phone.touched)&& phone.errors?.['pattern']" style="color:red;">* Please
+                    enter a valid phone number</span>
+
+                </div>
+                </div>
+                 <!--button type="submit" class="butt" [disabled]="form.invalid" >Add</button-->
+                 <button type="submit" class="butt"  >Add</button>
+              </form>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="myRightCtn">
+            <div class="box">
+              <header style="color: black;">Welcome..</header>
+              <p class="display">Employees data is confidential.
+                Don't share to anyone.
+                Please be cautious while adding the data .</p>
+
+              
+             
+            </div>
+          </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</body>

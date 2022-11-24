@@ -1,0 +1,56 @@
+<body>
+
+  <div class="main">
+<nav class="navbar navbar-expand-lg navnar-dark bg-primary">
+  <div class="container">
+    <div class="right">
+    <h3>Employee Dashboard</h3>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="rt">
+          <button type="button" class="btn btn-success" routerLink="addemployee">Add Employee</button>
+        </li>
+      </ul>
+    </div>
+    <div class="left">
+      <button routerLink="/home" class="btn btn-success mx-3">Back</button>
+    </div>
+    <div class="left">
+      <button routerLink="/login" class="btn btn-danger mx-3">Logout</button>
+    </div>
+   </div>
+</nav>
+<div class="container my-5">
+  <div class="col">
+  <h1 class="mb-3">Employees Info</h1>
+  </div>
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.role}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.phone}}</td>
+        <td><button type="button"   class="btn btn-success"  [routerLink]="['editemployee', employee.id]">View</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </div>
+</body>

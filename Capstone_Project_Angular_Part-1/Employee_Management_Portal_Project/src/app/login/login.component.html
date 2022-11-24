@@ -1,0 +1,69 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+  <img class="background-image" src="assets/photo.jpg"  alt="">
+
+  <div class="one">
+    <div *ngIf="alert" class="alert alert-custom alert-dismissible fade show" role="alert">
+      <strong><h5>Login  Successfull !....</h5></strong> 
+      <button type="button" routerLink="/home" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    </div>
+    <div class="one">
+      <div *ngIf="alert1" class="alert alert1-custom alert-dismissible fade show" role="alert">
+        <strong><h5>Login Unsuccessfull!...Password or Email Incorrect.</h5></strong> 
+        <button type="button"  class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      </div>
+
+
+  <div class="container">
+    <div class="myCard">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="myLeftCtn">
+            <form class="myForm text-center">
+              <header>LOG IN</header>
+              <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+                <div class="mb-3">
+                  <i class="fas fa-envelope"></i>
+                  <input formControlName="email" placeholder="Enter email" type="email" class="myInput"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div>
+                    <div class="text-danger"
+                      *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required')">* Email
+                      is Required</div>
+                    <div class="text-danger"
+                      *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('email')">* Enter a
+                      valid Email Address</div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <i class="fas fa-lock"></i>
+                  <input formControlName="password" placeholder="Enter password" type="password" class="myInput"
+                    id="exampleInputPassword1">
+                  <div>
+                    <div class="text-danger"
+                      *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required')">*
+                      Password
+                      is Required</div>
+                  </div>
+                </div>
+                <button type="submit" class="butt">Login</button>
+              </form><br>
+              <a routerLink="/signup">New User ? Click to Signup !</a>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="myRightCtn">
+            <div class="box">
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</body>

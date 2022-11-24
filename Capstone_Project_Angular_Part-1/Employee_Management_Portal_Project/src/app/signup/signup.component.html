@@ -1,0 +1,118 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <img class="background-image" src="assets/photo.jpg" alt="">
+  <div class="one">
+  <div *ngIf="alert" class="alert alert-custom alert-dismissible fade show" role="alert">
+    <strong><h5>Account Created Successfully !....</h5></strong> 
+    <button type="button" routerLink="/login" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  </div>
+  <div class="one">
+    <div *ngIf="alert1" class="alert alert1-custom alert-dismissible fade show" role="alert">
+      <strong><h5>Registration Unsuccessfull!.. Email Exist. Please try login..</h5></strong> 
+      <button type="button"  class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    </div>
+  <div class="container">
+    <div class="myCard">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="myLeftCtn">
+            <form class="myForm text-center">
+              <header>Create new account</header>
+              <form [formGroup]=" signupForm" (ngSubmit)="signUp()">
+                <div class="mb-3">
+                  <i class="fas fa-user"></i>
+                  <input formControlName="name" placeholder="Enter name" type="email" class="myInput"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.hasError('required')">* Name
+                      is Required</div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.hasError('minlength')">* Name
+                      must be atleast 4 characters
+                    </div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.hasError('pattern')">* Name
+                      should contain alphabets only</div>
+                  </div>
+                  <div class="text-danger"
+                    *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.hasError('maxlength')">* Name
+                    is exceeding the maxlength
+                  </div>
+                </div>
+
+
+                <div class="mb-3">
+                  <i class="fas fa-phone"></i>
+                  <input formControlName="mobile" placeholder="Enter number" type="email" class="myInput"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('mobile')?.touched && signupForm.get('mobile')?.hasError('required')">*
+                      Mobile
+                      number is Required</div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('mobile')?.touched && signupForm.get('mobile')?.hasError('pattern')">*
+                      Please
+                      enter valid Mobile Number</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-envelope"></i>
+                  <input formControlName="email" placeholder="Enter email" type="email" class="myInput"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.hasError('required')">*
+                      Email
+                      is Required</div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.hasError('email')">* Enter a
+                      valid Email Address</div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <i class="fas fa-lock"></i>
+                  <input formControlName="password" placeholder="Enter password" type="password" class="myInput"
+                    id="exampleInputPassword1">
+                  <div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.hasError('required')">
+                      * Password
+                      is Required</div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.hasError('minlength')">
+                      *
+                      Password must be atleast 6 characters</div>
+                    <div class="text-danger"
+                      *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.hasError('pattern')">*
+                      Password should contain atleast 1 lowercase,
+                      1 uppercase,1 numeric value </div>
+                  </div>
+
+                </div>
+                <button type="submit" class="butt" [disabled]="signupForm.invalid">Create Account</button>
+              </form><br>
+              <a routerLink="/login">Already a Member ? Click to Login !</a>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="myRightCtn">
+
+            <div class="box">
+              <header>Welcome..</header>
+
+              <p>Create your account and enjoy the features we are providing.
+                Here you can manage all the work related to your employees .</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

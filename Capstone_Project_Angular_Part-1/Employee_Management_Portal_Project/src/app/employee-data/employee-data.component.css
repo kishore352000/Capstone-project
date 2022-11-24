@@ -1,0 +1,38 @@
+
+
+.main{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.785);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.table{
+    border-collapse: collapse;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.329);
+}
+.table td{
+    border: 1px solid white;
+    color: white;
+}
+.table th{
+    border: 2px solid rgba(0, 0, 0, 0.852);
+    background-color: white;
+}
+
+.right{
+    position: absolute;
+    right: 78%;
+}
+.rt{
+    position:relative;
+    left:180%;
+}
+
+.col{
+    color: white;
+}
+
+

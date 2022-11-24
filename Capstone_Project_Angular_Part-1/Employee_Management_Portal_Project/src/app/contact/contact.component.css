@@ -1,0 +1,41 @@
+h2{
+    color: black;
+}
+.left{
+    position:absolute;
+    left:90%;
+}
+
+.btn {
+    width: 70px;
+    height: 40px;
+    margin-top: 1px;
+    font-size: 18px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.f1{
+        margin-top:5px;
+        border: 1px solid black;
+        background-color: lightblue;
+        width:600px;
+        height: 350px;;
+        padding:45px;
+        position:absolute;
+        top:35%;
+        left:10%;
+}
+b{
+    font-size: large;
+}
+.f2{
+    margin-top:5px;
+    border: 1px solid black;
+    background-color: lightblue;
+    width:600px;
+    height: 350px;;
+    padding:45px;
+    position:absolute;
+    top:35%;
+    left:50%;
+}
